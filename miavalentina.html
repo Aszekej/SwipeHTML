@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+  <style type="text/css">@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=gambarino@400&display=swap");
+@import url("https://fonts.cdnfonts.com/css/switzer");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Space+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300&family=Space+Grotesk&display=swap");
+
+#root {
+  white-space: pre-line;
+}
+:root {
+  --backgroundcolor: black;
+  --overlaycolor: black;
+  --overlay2: black;
+  --mobileback: black;
+  --mobileoverlay: black;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-blend-mode: overlay;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  /*pointer-events: none;*/
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  background-size: 100% 100%;
+  /*pointer-events: none;*/
+}
+img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 37.5rem) {
+  #upper-part {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 5% auto 5%;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  #upper-part {
+    display: flex;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  #upper-part .container {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    max-width: 55rem;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 37.5rem) {
+  #left {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  #left {
+    display: flex;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  #right {
+    max-width: 20rem;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  #right {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    height: fit-content;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+.branding-container {
+  position: relative;
+  height: fit-content;
+}
+@media screen and (min-width: 37.5rem) {
+  .imgspan {
+    height: 75dvh;
+    width: 100%;
+  }
+}
+#Restaurant-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 37.5rem) {
+  #Restaurant-image {
+    height: 80vw;
+    width: 100vw;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  #logo-container {
+    width: 33%;
+    min-width: 8rem; /*temporarily*/
+    position: absolute;
+    top: -7%;
+    left: -7%;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  #logo-container {
+    width: 30%;
+    display: block;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 15%;
+    top: 10px;
+    margin-top: -13%;
+    margin-bottom: -15%;
+  }
+}
+#menu-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 50%;
+  height: 10%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+}
+/* @media screen and (max-width: 37.5rem) {
+  #menu-button {
+    display: flex;
+    position: relative;
+    left: 35%;
+    width: 70%;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+  }
+} */
+@media screen and (max-width: 37.5rem) {
+  #menu-button {
+    display: flex;
+    position: relative;
+    left: 35%;
+    width: 70%;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+  }
+}
+.iframe {
+  position: relative;
+  margin: 0, auto;
+}
+@media screen and (max-width: 37.5rem) {
+  .iframe {
+    position: relative;
+    height: auto;
+    width: 100%;
+    grid-column: 1;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .contact-info {
+    grid-column: 2;
+    position: relative;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  #upper-part p {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  #upper-part p {
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    grid-column: 2;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 5%;
+  }
+}
+#upper-part p img {
+  padding-right: 10px;
+  height: 1.5rem;
+  width: auto;
+}
+.social {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 37.5rem) {
+  .social {
+    display: flex;
+    grid-column: span 2;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.5rem;
+    left: 6%;
+  }
+}
+.icon img {
+  height: 20%;
+  width: auto;
+}
+@media screen and (max-width: 37.5rem) {
+  .icon img {
+    height: 25%;
+  }
+}
+/*lower-part*/
+@media screen and (min-width: 37.5rem) {
+  #lower-part {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  #lower-part .container {
+    max-width: 66rem;
+    margin: auto;
+  }
+}
+#lower-part h2 {
+  font-size: 4.875rem;
+  margin: 0;
+  text-align: left;
+  font-weight: normal;
+  padding-top: 1rem;
+}
+@media screen and (max-width: 37.5rem) {
+  #lower-part h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  #short {
+    font-size: 1rem;
+    text-align: center;
+    width: 90%;
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+#lower-part p {
+  @media screen and (min-width: 37.5rem) {
+    line-height: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: normal;
+  }
+}
+#short {
+  padding-bottom: 20px;
+  font-size: 1rem;
+  color: white;
+  text-align: left;
+}
+.oddline,
+.evenline {
+  display: grid;
+  margin: 0;
+}
+.oddline {
+  grid-template-columns: 1fr 6fr 3fr;
+}
+.evenline {
+  grid-template-columns: 1fr 3fr 6fr;
+}
+@media screen and (max-width: 37.5rem) {
+  .oddline,
+  .evenline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #8f8f8f;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  .odd-column1,
+  .even-column1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  .odd-column2,
+  .even-column3 {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  .even-column3 {
+    padding-left: 2rem;
+  }
+}
+.odd-img {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 37.5rem) {
+  .odd-img {
+    margin-bottom: 2rem;
+  }
+}
+.even-img {
+  left: -5%;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  @media screen and (min-width: 37.5rem) {
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .even-img {
+    order: 2;
+    margin-bottom: 2rem;
+    left: 0.5%;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  .vertical-line {
+    height: 100%;
+    border-left: 1px solid #8f8f8f;
+    background-color: #8f8f8f;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  .box {
+    padding: 10px;
+    position: absolute;
+    grid-column: 2;
+  }
+}
+.ptagodd,
+.ptag {
+  position: relative;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 37.5rem) {
+  .ptagodd,
+  .ptag {
+    margin: 0;
+    padding-top: 3rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .ptag {
+    order: 1;
+  }
+}
+.bioodd,
+.bio {
+  position: relative;
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+.ptag {
+  @media screen and (max-width: 37.5rem) {
+    order: 1;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .bio {
+    order: 1;
+  }
+}
+#lower-part img {
+  max-width: 100%;
+  height: auto;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#swipelime-logo {
+  width: 3rem;
+}
+</style><title>Mia Valentina</title>
+<link rel="icon" type="image/ico" href="/src/favicon.ico" sizes="96x96" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="keywords" content="menu, Budapest, olasz, italian, restaurant, ristorante, trattoria, italiano, downtown, alacarte, soup, antipasti, pasta, pizza, sweets, salad, sauce, sides, near, me" >
+<meta property="og:site_name" content="Mia Valentina" ><meta property="og:description" content="where dining is not just a meal, but a culinary experience." >
+<meta property="og:url" content="https://miavalentina.hu" >
+<meta property="og:image" content="http://miavalentina.hu/src/og.jpg" >
+<meta property="og:image:secure_url" content="https://miavalentina.hu/src/og.jpg" >
+<meta property="og:image:type" content="image/jpeg" >
+<meta property="og:image:width" content="1044" >
+<meta property="og:image:height" content="500" >
+</head>
+  <body>
+    <div id="root"><div class="App"><div><style>
+body {
+  font-family: Nunito, sans-serif;
+  background: #000814;
+  color: white;
+}
+body::before {
+  background:  linear-gradient(180deg, rgba(0, 53, 102, 0.71),rgba(235, 157, 30, 0));
+}
+@media (max-width: 37.5rem) {
+  body::before {
+    background: linear-gradient(180deg, rgba(0, 53, 102, 0.71),rgba(235, 157, 30, 0));
+  }
+}
+body::after {
+  background-image: url(src/noiseEffect.png);
+}
+
+img {
+  border-radius: 0;
+}
+
+#logo-container {
+  background:none;
+  border-radius: 0;
+}
+
+#menu-button {
+  background: #FF8A00;
+  border-radius: 30px;
+  font-family: Bebas Neue;
+  color:white;
+}
+
+#upper-part p:nth-child(4) {
+  color: #FFC300;
+}
+
+#lower-part {
+  border-bottom: 1px solid #FFFFFF;
+}
+@media screen and (min-width: 37.5rem) {
+  #lower-part {
+    border-top: 1px solid #FFFFFF;
+  }
+}
+
+#lower-part h2 {
+  color: #FFC300;
+  font-family: Bebas Neue;  
+}
+
+@media screen and (max-width: 37.5rem) {
+  .oddline,
+  .evenline {
+    border-top: 1px solid #FFFFFF; 
+  }
+}
+    
+@media screen and (min-width: 37.5rem) {
+  .box {
+    border: 2px solid #FF8A00;
+    border-radius: 30px;
+    background-color: #FF8A00
+  }
+}
+  
+.ptagodd,
+.ptag {
+  color: #FFC300;
+  font-family: Bebas Neue;
+}
+  </style>
+  <div class="layout-container">
+    <div id="upper-part">
+      <div class="container">
+      <span id="left" class="column">
+        <span id="left" class="column">
+          <span class="branding-container">
+            <div class="imgspan">
+              <img src="./src/main.jpg" alt="Restaurant" id="Restaurant-image">
+            </div>
+              <span id="logo-container">
+                <img src="./src/logo.png" alt="logo">
+              </span><a href="https://eu.swipelime.com/4/EBkJJXgCSBoLX2AKe/cxHfDEbwfkXkdsQfm" id="menu-button" target="blank">Our menu</a></span>
+            </span>
+          </span>
+          <span id="right" class="column">
+            <span class="iframe"><a href="https://maps.app.goo.gl/UKHnQU7DQowt2xMX9" target="blank"><img src="./src/map.png" alt="map" id="Map"></a></span>
+            <span class="contact-info">
+              <p><img src="./src/icoMapMarker.png" alt="marker-icon">1065 Budapest<br>Bajcsy-Zsilinszky road 9.</p>
+              <p><img src="./src/icoPhone.png" alt="phone-icon"> +36 70 577 7325</p>
+              <p><img src="./src/icoEmail.png" alt="email-icon"> info@miavalentina.hu</p>
+                <p><img src="./src/icoClock.png" alt="clock -icon">M - T 11:00 AM - 11:30 PM
+F - S 9:00 AM - 11:30 PM</p>
+</span>
+<div class="social">
+  <a class="icon" href="https://www.facebook.com/MiaValentinabudapest" target="_blank"><img src="./src/icoFacebook.png"></a>
+  <a class="icon" href="https://www.instagram.com/miavalentinabudapest/" target="_blank"><img src="./src/icoInstagram.png"></a>
+  <a class="icon" href="https://www.tiktok.com/@miavalentinabudapest" target="_blank"><img src="./src/icoTiktok.png"></a>
+</div>
+</span>
+</div>
+</div>
+<div id="lower-part"><div class="container">
+  <h2>About Us</h2>
+  <p id="short">Welcome to Mia Valentina, where dining is not just a meal, but a culinary experience. Our restaurant is the result of a deep love for Italian cuisine, driven by our passion to serve exquisite flavors create unforgettable moments, and offer exceptional hospitality.</p>
+  <span>
+    <div class="oddline">
+      <div class="odd-column1">
+        <div class="vertical-line">
+        </div>
+        <span class="box"></span>
+      </div>
+      <div class="odd-column2">
+        <p class="ptagodd"></p>
+        <br>
+        <p class="bioodd">We offer a delectable range of dishes that will transport your taste buds straight to Italy. Our menu features a variety of classic Italian dishes, from pasta to pizza and tiramisu, all made with the freshest ingredients and prepared by our talented chefs with years of experience.</p>
+      </div>
+      <span class="odd-img"><img src="./src/1.jpg"></span>
+    </div>
+    <div class="evenline">
+      <div class="even-column1">
+        <div class="vertical-line">
+        </div>
+        <span class="box">
+        </span>
+      </div>
+      <span class="even-img"><img src="./src/2.jpg"></span>
+      <div class="even-column3">
+        <p class="ptag"></p>
+        <br>
+        <p class="bio">Our warm and inviting atmosphere will make you feel right at home, and our friendly staff is always happy to make recommendations or help you select the perfect wine to complement your meal. Whether you're looking for a romantic dinner for two or a family celebration, Mia Valentina is the perfect destination for a memorable Italian dining experience. Come and join us for a taste of Italy right in the heart of Budapest.</p>
+      </div>
+    </div>
+    <div class="oddline">
+      <div class="odd-column1">
+        <div class="vertical-line"></div>
+        <span class="box"></span></div>
+        <div class="odd-column2">
+          <p class="ptagodd"></p>
+          <br>
+          <p class="bioodd">We believe that dining is an art form, and our restaurant is designed to provide a warm and welcoming atmosphere that will transport you to a world of culinary pleasure. Whether you're here to celebrate a special occasion, enjoy a romantic dinner for two, or simply savor a meal with family and friends, our restaurant offers an unforgettable setting where you can relax, let go, and create lasting memories.</p>
+        </div>
+        <span class="odd-img"><img src="./src/3.jpg"></span>
+      </div>
+      <div class="evenline">
+        <div class="even-column1">
+          <div class="vertical-line"></div>
+          <span class="box"></span>
+        </div>
+        <span class="even-img"><img src="./src/og.jpg"></span>
+        <div class="even-column3">
+          <p class="ptag"></p>
+          <br>
+          <p class="bio">Thank you for choosing Mia Valentina. We look forward to welcoming you to our restaurant and creating a culinary experience that will leave you with unforgettable memories and an irresistible craving to return. Buon appetito!</p>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+<footer>
+  <p>Powered by<a href="https://swipelime.com/" target="blank"><img src="./src/swipelime.png" id="swipelime-logo"></a></p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
